@@ -1,0 +1,77 @@
+.cardholder {
+  -webkit-perspective: 99rem;
+     -moz-perspective: 99rem;
+       -o-perspective: 99rem;
+          perspective: 99rem;
+  -webkit-user-select: none;
+          user-select: none;
+  position: relative;
+  margin: 1vh auto;
+  height: 18vh;
+  width: 18vh;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform 1s;
+          -moz-transition: -moz-transform 1s;
+              -o-transition: -o-transform 1s;
+                    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card div {
+    width: 100%;
+    height: 100%;
+    padding: 1vh;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.card .front {
+  background: #fff;
+  cursor: pointer;
+}
+.card .back {
+  background: #fff;
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+}
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+     -moz-transform: rotateY( 180deg );
+       -o-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+         display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+	        flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 1vh;
+  margin-left: 1vh;
+}
+
+.col {
+  -webkit-box-flex: 0;
+   -ms-flex: 0 0 auto;
+       flex: 0 0 auto;
+  padding-right: 1vh;
+  padding-left: 1vh;
+  -ms-flex-preferred-size: 50%;
+               flex-basis: 50%;
+  max-width: 50%;
+}
