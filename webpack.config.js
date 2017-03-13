@@ -11,7 +11,8 @@ module.exports = {
     rules:[
       {test:/\.(js|jsx)$/, use: "babel-loader"},
       {test:/\.css$/, use:extractCSS.extract({use:"css-loader"})},
-      {test:/\.html$/, use:extractHTML.extract({use:"html-loader"})}
+      {test:/\.html$/, use:extractHTML.extract({use:"html-loader"})},
+      {test:/\.(png|gif)$/, use: "file-loader?name=img/[name].[ext]"},
     ]
   },
   plugins:[

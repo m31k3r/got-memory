@@ -5,8 +5,8 @@ import Item from "./Item.jsx";
 import shuffle from "./shuffle.js";
 
 let cards = [];
-let images = ["./img/arryn.png", "./img/baratheon.png",
-  "./img/greyjoy.png", "./img/lannister.png", "./img/stark.png"];
+let images = ["arryn.png", "baratheon.png",
+  "greyjoy.png", "lannister.png", "stark.png"];
 
 shuffle(images.concat(images)).map((image, index) => {
   cards.push({active:false, image, index, found:false});

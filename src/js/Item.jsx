@@ -8,7 +8,7 @@ export default class Item extends React.Component {
         <div className={active||found?"card flipped":"card"} onClick={onClick}>
           <div className="front"></div>
           <div className="back">
-            <img  src={image} />
+            <img  src={require("../img/"+image)} />
           </div>
         </div>
       </div>
